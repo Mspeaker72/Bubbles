@@ -3,19 +3,28 @@ import './App.css'
 import Bubble from './components/bubble'
 import Footer from './components/Footer'
 import Header from './components/Header'
+import getInfo from './assets/info'
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  // const [count, setCount] = useState(0)
   // const counter = () => {setCount((prevCount)=>prevCount+1)}
   // just for notation
+
+  const info = getInfo()
+
+  if(info.length>12){
+    return (<p>Invalid Request</p>);
+  }
 
   return (
     <>
     <Header></Header>
-     <Bubble initial_text={"info policy"} text={"welcome to company x..."} color={"blue"} className={"bubble"}></Bubble>
-     <Bubble initial_text={"info policy"} text={"welcome to company x..."} color={"blue"} className={"bubble"}></Bubble>
-    <Bubble initial_text={"info policy"} text={"welcome to company x..."} color={"blue"} className={"bubble"}></Bubble>
+    <div className='container'>
+    {info.map((information)=><Bubble initial_text={information.term} 
+    text={information.definition} color={"blue"} 
+    className={"bubble"}></Bubble>)}
+    </div>
+    
     <Footer></Footer>
     </>
   )

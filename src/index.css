@@ -1,23 +1,31 @@
 
 
 
-/* body {
-  background-color: white;
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-} */
+/* App.css */
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns layout */
+  gap: 10px; /* Space between items */
+  padding-bottom: 30px;
+  
+  width: 100%;
+  box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+}
 
-.bubble{
-  width: fit-content;
+body{
+  background-color:  #f0f0f0;
+}
+
+.bubble {
   border-style: dotted;
+  height: fit-content;
   border-radius: 5px;
   border-width: 2px;
   border-color: black;
   cursor: pointer;
-  padding: 10px;
+  padding: 5px;
+  text-align: center;
+  box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
 }
 
 
@@ -66,6 +74,5 @@ footer {
   left: 0;
   width: 100%;
   color: white;
-  padding: 20px; 
   text-align: center; 
 }
