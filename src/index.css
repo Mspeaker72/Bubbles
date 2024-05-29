@@ -1,14 +1,14 @@
 
 
 
-body {
+/* body {
   background-color: white;
   margin: 0;
   display: flex;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-}
+} */
 
 .bubble{
   width: fit-content;
@@ -25,3 +25,47 @@ body {
   color: white;
 }
 
+header {
+  background-color: #333; 
+  color: white; 
+  padding: 20px; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin-left: 0;
+}
+
+header h1 {
+  margin: 0; /* Remove default margin */
+}
+
+nav ul {
+  list-style-type: none; /* Remove bullet points */
+  padding: 0; /* Remove default padding */
+}
+
+nav ul li {
+  display: inline; /* Display list items horizontally */
+  margin-right: 20px; /* Add spacing between list items */
+}
+
+nav ul li a {
+  color: white; 
+  text-decoration: none; /* Remove underline from links */
+}
+
+nav ul li a:hover {
+  text-decoration: underline; 
+  color: greenyellow;
+}
+
+footer {
+  background-color: #333; 
+  bottom: 0;
+  position: fixed;
+  left: 0;
+  width: 100%;
+  color: white;
+  padding: 20px; 
+  text-align: center; 
+}
