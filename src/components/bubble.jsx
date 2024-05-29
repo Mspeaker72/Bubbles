@@ -13,15 +13,13 @@ function Bubble({initial_text,text,color,className}){
 
     function speak(){
         
-
         if(text_===initial_text){
             const utterance = new SpeechSynthesisUtterance(text)
             window.speechSynthesis.speak(utterance);
             return
         }
-        const utterance = new SpeechSynthesisUtterance(initial_text)
-            window.speechSynthesis.speak(utterance);
-            return
+        window.speechSynthesis.cancel()
+            
        
     }
     return(
